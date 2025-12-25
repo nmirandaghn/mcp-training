@@ -1,0 +1,50 @@
+[project]
+name = "mcp-course"
+version = "0.1.0"
+description = "MCP Course projects"
+requires-python = ">=3.11, <3.14"
+dependencies = [
+    # Pin click
+    "click==8.1.7",
+    # From binance-mcp
+    "mcp[cli]==1.9.2",
+    "requests==2.32.3", # Also for llm-tool-use
+    # From llm-tool-use
+    "python-dotenv==1.1.0",
+    "google-generativeai==0.8.5",
+    # Jupyter support
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.6",
+    "langchain==0.3.26",
+    "langchain-openai==0.3.27",
+    "langchain-core==0.3.68",
+    "langchain-mcp-adapters==0.1.9",
+    "langgraph==0.5.2",
+    "langchain-google-genai==2.0.10",
+    "black>=25.1.0",
+]
+
+[project.optional-dependencies]
+ci = [
+    "pytest",
+    "pytest-dotenv",
+]
+
+[tool.ruff]
+line-length = 79 
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.10",
+]
+
+smolagents = [
+    "smolagents[mcp]",
+    "transformers",
+    "mcpadapt",
+]
+
+openai = [
+    "openai",
+    "openai-agents",
+]

@@ -1,0 +1,4 @@
+Python: /home/nmiranda/mcp/udemy_mcp/mcp-training/.venv/bin/python
+MCP: /home/nmiranda/mcp/udemy_mcp/mcp-training/binance-mcp/binance-mcp.py
+
+npx @modelcontextprotocol/inspector@0.16.2 /home/nmiranda/mcp/udemy_mcp/mcp-training/.venv/bin/python /home/nmiranda/mcp/udemy_mcp/mcp-training/binance-mcp/binance-mcp.py

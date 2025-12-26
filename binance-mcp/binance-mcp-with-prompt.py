@@ -42,6 +42,21 @@ def executive_summary() -> str:
     Symbols: For ethereum/eth, the symbol is "ETHUSDT".
     """
     
+@mcp.prompt()
+def crypto_summary(crypto: str) -> str:
+    """Returns a summary of a given crypto asset"""
+    return f"""
+    Get the price of the following crypto asset: {crypto}
+    
+    and provide me with a summary of the price changes in the last 24 hours.
+
+    When using the get_price and get_price_price_change tools,
+    use the symbol as the argument.
+    
+    Symbols: For bitcoin/btc, the symbol is "BTCUSDT".
+    Symbols: For ethereum/eth, the symbol is "ETHUSDT".
+    """
+    
 @mcp.tool()
 def get_price(symbol: str) -> Any:
     """
